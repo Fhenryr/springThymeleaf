@@ -18,12 +18,22 @@ public class Departamento  implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	
 	@Column(name = "nome", nullable = false, unique = true, length = 60)
 	private String nome;
 	
 	@OneToMany(mappedBy = "departamento")
 	private List<Cargo> cargos;
+
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
