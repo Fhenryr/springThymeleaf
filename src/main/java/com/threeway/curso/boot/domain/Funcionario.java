@@ -39,7 +39,7 @@ public class Funcionario {
 	private LocalDate dataEntrada;
 
 	@DateTimeFormat(iso = ISO.DATE)
-	@Column(name = "data_saida", nullable = false, columnDefinition = "DATE")
+	@Column(name = "data_saida", nullable = true, columnDefinition = "DATE")
 	private LocalDate dataSaida;
 
 	@OneToOne(cascade = CascadeType.ALL)

@@ -62,7 +62,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="cargo">Cargo</label>
-                        <select id="cargo" class="form-control" th:field="*{cargo}">
+                       <select id="cargo" class="form-control" th:field="*{cargo}">
                             <option value="">Selecione...</option>
                             <option th:each="c : ${cargos}" th:value="${c.id}" th:text="${c.nome}"></option>
                         </select>

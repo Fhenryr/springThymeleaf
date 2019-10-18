@@ -28,7 +28,7 @@ public class DepartamentoClontroller {
 	public String salvar(Departamento departamento, RedirectAttributes attr) {
 		service.salvar(departamento);
 		attr.addFlashAttribute("success", "Departamento incluído com sucesso");
-		return "redirect:/departamentos/cadastrar";
+		return "redirect:/departamentos/listar";
 	}
 
 	@GetMapping("/listar")
@@ -47,7 +47,7 @@ public class DepartamentoClontroller {
 	@GetMapping("/editar/{id}")
 	public String preEditar(@PathVariable("id") Long id, ModelMap model) {
 		model.addAttribute("departamento", service.buscarPorId(id));
-		return "redirect:/departamento/cadastro";
+		return "/departamento/cadastro";
 	}
 	
 	@GetMapping("/excluir/{id}")

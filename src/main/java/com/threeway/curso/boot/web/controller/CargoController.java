@@ -41,7 +41,7 @@ public class CargoController {
 	public String salvar(Cargo cargo, RedirectAttributes attr) {
 		cargoService.salvar(cargo);
 		attr.addFlashAttribute("success", "Cargo incluído com sucesso");
-		return "redirect:/cargos/cadastrar";
+		return "redirect:/cargos/listar";
 	}
 
 	@GetMapping("/listar")

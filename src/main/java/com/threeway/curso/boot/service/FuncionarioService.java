@@ -8,12 +8,14 @@ public interface FuncionarioService {
 
 	void salvar(Funcionario funcionario);
 
-	void editar(Funcionario funcionario);
+	void editar(Funcionario funcionario) throws Exception;
 
 	void excluir(Long id);
 
 	Funcionario buscarPorId(Long id);
 
-	List<Funcionario> BuscarTodos(Long id);
+	List<Funcionario> BuscarTodos();
+
+	List<Funcionario> buscarPorNome(String nome);
 
 }
